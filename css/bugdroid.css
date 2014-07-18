@@ -1,0 +1,712 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.color{
+    background-color: #9acd32;
+}
+
+.bugdroid{
+    margin-left: 60px;
+    width: 200px;
+    position: fixed;
+    bottom: 0px;
+
+
+
+}
+.bugdroid .head{
+    margin-left : 35px;
+}
+.bugdroid .head .main{
+
+    width :  100px;
+    height : 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.bugdroid .head .antenna{
+    position : relative;
+    width :  7px;
+    height : 30px;
+    border-radius: 3px 3px 0 0;
+    top : 15px;
+    display: inline-block;
+}
+
+.bugdroid .head .antenna.left{
+    left : 20px;
+    -webkit-transform: rotate(-30deg);
+    -moz-transform:rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+.bugdroid .head .antenna.right{
+    left : 60px;
+    -webkit-transform: rotate(30deg);
+    -moz-transform:rotate(30deg);
+    -o-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.bugdroid .head .eye{
+    position : relative;
+    width :  12px;
+    height : 12px;
+    background-color: #FFF;
+    border-radius: 12px;
+    top : 35px;
+    display: inline-block;
+    background : url(../img/honey_im_subtle.png);
+}
+
+.bugdroid .head .eye.left{
+    left : 0px;
+}
+.bugdroid .head .eye.right{
+    left : 25px;
+}
+
+.bugdroid .body{
+  height : 105px;
+}
+
+.bugdroid .leftArm{
+    width :  30px;
+    height : 80px;
+    border-radius: 40px;
+    float : left;
+}
+
+.bugdroid .trunk{
+    width :  100px;
+    height : 100px;
+    border-radius: 0 0 20px 20px;
+    float : left;
+    margin: 5px 5px 0 5px;
+}
+
+.bugdroid .rightArm{
+    width :  30px;
+    height : 80px;
+    border-radius: 40px;
+    float : left;
+    cursor : pointer;
+}
+.bugdroid .bottom{
+    height : 50px;
+    padding-left: 50px;
+
+}
+.bugdroid .leftFoot{
+    width :  30px;
+    height : 45px;
+    border-radius: 0 0 40px 40px;
+    float : left;
+    margin: -5px 10px 0 0;
+}
+
+.bugdroid .rightFoot{
+    width :  30px;
+    height : 45px;
+    border-radius: 0 0 40px 40px;
+    float : left;
+    margin-top : -5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.bugdroid .head .antenna.left.animated{
+    animation: antennaRotateLeft 0.5s linear;
+    -moz-animation: antennaRotateLeft 0.5s linear; /* Firefox */
+    -webkit-animation: antennaRotateLeft 0.5s linear;  /* Safari and Chrome */
+    -o-animation:antennaRotateLeft 0.5s linear; /* Opera */
+}
+
+
+@keyframes antennaRotateLeft
+{
+0%   {}
+50%  {-transform: rotate(-45deg);left : 16px}
+100% {}
+}
+
+@-moz-keyframes antennaRotateLeft /* Firefox */
+{
+0%   {}
+50%  {-moz-transform: rotate(-45deg);left : 16px}
+100% {}
+}
+
+@-webkit-keyframes antennaRotateLeft /* Safari and Chrome */
+{
+0%   {}
+50%  {-webkit-transform: rotate(-45deg);left : 16px}
+100% {}
+}
+
+@-o-keyframes antennaRotateLeft /* Opera */
+{
+0%   {}
+50%  {-o-transform: rotate(-45deg);left : 16px}
+100% {}
+}
+
+
+.bugdroid .head .antenna.right.animated{
+    animation: antennaRotateRight 0.5s linear;
+    -moz-animation: antennaRotateRight 0.5s linear; /* Firefox */
+    -webkit-animation: antennaRotateRight 0.5s linear;  /* Safari and Chrome */
+    -o-animation:antennaRotateRight 0.5s linear; /* Opera */
+}
+
+
+@keyframes antennaRotateRight
+{
+0%   {}
+50%  {-transform: rotate(45deg);left : 64px}
+100% {}
+}
+
+@-moz-keyframes antennaRotateRight /* Firefox */
+{
+0%   {}
+50%  {-moz-transform: rotate(45deg);left : 64px}
+100% {}
+}
+
+@-webkit-keyframes antennaRotateRight /* Safari and Chrome */
+{
+0%   {}
+50%  {-webkit-transform: rotate(45deg);left : 64px}
+100% {}
+}
+
+@-o-keyframes antennaRotateRight /* Opera */
+{
+0%   {}
+50%  {-o-transform: rotate(45deg);left : 64px}
+100% {}
+}
+
+.bugdroid .head .eye.animated{
+    animation: blinkAnimation 0.5s linear;
+    -moz-animation: blinkAnimation 0.5s linear; /* Firefox */
+    -webkit-animation: blinkAnimation 0.5s linear;  /* Safari and Chrome */
+    -o-animation:blinkAnimation 0.5s linear; /* Opera */
+}
+
+
+@keyframes blinkAnimation
+{
+0%   {}
+25%  {height : 0px}
+50%  {}
+70%  {height : 0px}
+100% {}
+}
+
+@-moz-keyframes blinkAnimation /* Firefox */
+{
+0%   {}
+25%  {height : 0px}
+50%  {}
+70%  {height : 0px}
+100% {}
+}
+
+@-webkit-keyframes blinkAnimation /* Safari and Chrome */
+{
+0%   {}
+25%  {height : 0px}
+50%  {}
+70%  {height : 0px}
+100% {}
+}
+
+@-o-keyframes blinkAnimation /* Opera */
+{
+0%   {}
+25%  {height : 0px}
+50%  {}
+70%  {height : 0px}
+100% {}
+}
+
+.bugdroid .head.animated{
+    animation: headAnimation 0.5s linear;
+    -moz-animation: headAnimation 0.5s linear; /* Firefox */
+    -webkit-animation: headAnimation 0.5s linear;  /* Safari and Chrome */
+    -o-animation:headAnimation 0.5s linear; /* Opera */
+}
+
+
+@keyframes headAnimation
+{
+0%   {}
+25%  {margin-bottom : 5px}
+50%  {}
+70%  {margin-bottom : 5px}
+100% {}
+}
+
+@-moz-keyframes headAnimation /* Firefox */
+{
+0%   {}
+25%  {margin-bottom : 5px}
+50%  {}
+70%  {margin-bottom : 5px}
+100% {}
+}
+
+@-webkit-keyframes headAnimation /* Safari and Chrome */
+{
+0%   {}
+25%  {margin-bottom : 5px}
+50%  {margin-bottom : 2px}
+70%  {margin-bottom : 5px}
+100% {}
+}
+
+@-o-keyframes headAnimation /* Opera */
+{
+0%   {}
+25%  {margin-bottom : 5px}
+50%  {}
+70%  {margin-bottom : 5px}
+100% {}
+}
+
+.rightArm.animated{
+    animation: hiAnimation 1.5s ease-in-out;
+    -moz-animation: hiAnimation 1.5s ease-in-out; /* Firefox */
+    -webkit-animation: hiAnimation 1.5s ease-in-out;  /* Safari and Chrome */
+    -o-animation: hiAnimation 1.5s ease-in-out; /* Opera */
+}
+
+@keyframes hiAnimation
+{
+0%   {}
+25%  {margin-top : -50px;margin-left: 5px;-transform: rotate(20deg)}
+50%  {margin-top : -50px;margin-left: 15px;-transform: rotate(50deg)}
+70%  {margin-top : -52px;margin-left: -5px;-transform: rotate(-10deg)}
+90%  {margin-top : -50px;margin-left: 5px;-transform: rotate(20deg)}
+100% {}
+}
+
+@-moz-keyframes hiAnimation /* Firefox */
+{
+0%   {}
+25%  {margin-top : -50px;margin-left: 5px;-moz-transform: rotate(20deg)}
+50%  {margin-top : -50px;margin-left: 15px;-moz-transform: rotate(50deg)}
+70%  {margin-top : -52px;margin-left: -5px;-moz-transform: rotate(-10deg)}
+90%  {margin-top : -50px;margin-left: 5px;-moz-transform: rotate(20deg)}
+100% {}
+}
+
+@-webkit-keyframes hiAnimation /* Safari and Chrome */
+{
+0%   {}
+25%  {margin-top : -50px;margin-left: 5px;-webkit-transform: rotate(20deg)}
+50%  {margin-top : -50px;margin-left: 15px;-webkit-transform: rotate(50deg)}
+70%  {margin-top : -52px;margin-left: -5px;-webkit-transform: rotate(-10deg)}
+90%  {margin-top : -50px;margin-left: 5px;-webkit-transform: rotate(20deg)}
+100% {}
+}
+
+@-o-keyframes hiAnimation /* Opera */
+{
+0%   {}
+25%  {margin-top : -50px;margin-left: 5px;-o-transform: rotate(20deg)}
+50%  {margin-top : -50px;margin-left: 15px;-o-transform: rotate(50deg)}
+70%  {margin-top : -52px;margin-left: -5px;-o-transform: rotate(-10deg)}
+90%  {margin-top : -50px;margin-left: 5px;-o-transform: rotate(20deg)}
+100% {}
+}
+
+
+.bugdroid .leftFoot.walkAnimated{
+    animation: leftFootWalkAnimation 1.5s ease-in-out;
+    -moz-animation: leftFootWalkAnimation 1.5s ease-in-out; /* Firefox */
+    -webkit-animation: leftFootWalkAnimation 1.5s ease-in-out;  /* Safari and Chrome */
+    -o-animation: leftFootWalkAnimation 1.5s ease-in-out; /* Opera */
+}
+
+@keyframes leftFootWalkAnimation
+{
+0%   {}
+25%  {-transform: rotate3d(1,0,0,40deg)}
+50%  {-transform: rotate3d(1,0,0,-10deg);}
+70%  {-transform: rotate3d(1,0,0,40deg);}
+90%  {-transform: rotate3d(1,0,0,-10deg);}
+100% {}
+}
+
+@-moz-keyframes leftFootWalkAnimation /* Firefox */
+{
+0%   {}
+25%  {-moz-transform: rotate3d(1,0,0,40deg)}
+50%  {-moz-transform: rotate3d(1,0,0,-10deg);}
+70%  {-moz-transform: rotate3d(1,0,0,40deg);}
+90%  {-moz-transform: rotate3d(1,0,0,-10deg);}
+100% {}
+}
+
+@-webkit-keyframes leftFootWalkAnimation /* Safari and Chrome */
+{
+0%   {}
+25%  {-webkit-transform: rotate3d(1,0,0,40deg)}
+50%  {-webkit-transform: rotate3d(1,0,0,-10deg);}
+70%  {-webkit-transform: rotate3d(1,0,0,40deg);}
+90%  {-webkit-transform: rotate3d(1,0,0,-10deg);}
+100% {}
+}
+
+@-o-keyframes leftFootWalkAnimation /* Opera */
+{
+0%   {}
+25%  {-o-transform: rotate3d(1,0,0,40deg)}
+50%  {-o-transform: rotate3d(1,0,0,-10deg);}
+70%  {-o-transform: rotate3d(1,0,0,40deg);}
+90%  {-o-transform: rotate3d(1,0,0,-10deg);}
+100% {}
+}
+
+.bugdroid .rightFoot.walkAnimated{
+    animation: rightFootWalkAnimation 1.5s ease-in-out;
+    -moz-animation: rightFootWalkAnimation 1.5s ease-in-out; /* Firefox */
+    -webkit-animation: rightFootWalkAnimation 1.5s ease-in-out;  /* Safari and Chrome */
+    -o-animation: rightFootWalkAnimation 1.5s ease-in-out; /* Opera */
+}
+
+@keyframes rightFootWalkAnimation
+{
+0%   {}
+25%  {-transform: rotate3d(1,0,0,40deg)}
+50%  {-transform: rotate3d(1,0,0,-10deg);}
+70%  {-transform: rotate3d(1,0,0,40deg);}
+90%  {-transform: rotate3d(1,0,0,-10deg);}
+100% {}
+}
+
+@-moz-keyframes rightFootWalkAnimation /* Firefox */
+{
+0%   {}
+25%  {-moz-transform: rotate3d(1,0,0,40deg)}
+50%  {-moz-transform: rotate3d(1,0,0,-10deg);}
+70%  {-moz-transform: rotate3d(1,0,0,40deg);}
+90%  {-moz-transform: rotate3d(1,0,0,-10deg);}
+100% {}
+}
+
+@-webkit-keyframes rightFootWalkAnimation /* Safari and Chrome */
+{
+0%   {}
+25%  {-webkit-transform: rotate3d(1,0,0,-10deg)}
+50%  {-webkit-transform: rotate3d(1,0,0,40deg);}
+70%  {-webkit-transform: rotate3d(1,0,0,-10deg);}
+90%  {-webkit-transform: rotate3d(1,0,0,40deg);}
+100% {}
+}
+
+@-o-keyframes rightFootWalkAnimation /* Opera */
+{
+0%   {}
+25%  {-o-transform: rotate3d(1,0,0,-10deg)}
+50%  {-o-transform: rotate3d(1,0,0,40deg);}
+70%  {-o-transform: rotate3d(1,0,0,-10deg);}
+90%  {-o-transform: rotate3d(1,0,0,40deg);}
+100% {}
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
