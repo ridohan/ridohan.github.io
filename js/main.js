@@ -283,6 +283,7 @@
 			      type: "POST",
 			      url: "https://formspree.io/f/xvovekqo",
 			      data: $(form).serialize(),
+				  dataType: "json",
 				  crossDomain: true,
 				  headers:{"Access-Control-Allow-Origin":"*"},
 
