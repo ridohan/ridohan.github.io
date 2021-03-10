@@ -283,6 +283,8 @@
 			      type: "POST",
 			      url: "https://formspree.io/f/xvovekqo",
 			      data: $(form).serialize(),
+				  crossDomain: true,
+				  headers:{"Access-Control-Allow-Origin":"*"},
 
 			      beforeSend: function() { 
 			      	sLoader.fadeIn(); 
@@ -314,14 +316,17 @@
 		fadeInTime  = 400,         // how slow/fast you want the button to show
 		fadeOutTime = 400,         // how slow/fast you want the button to hide
 		scrollSpeed = 300,         // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
-		goTopButton = $("#go-top")
+		goTopButton = $("#go-top"),
+		goDownButton = $("#go-down")
 
 		// Show or hide the sticky footer button
 		$(window).on('scroll', function() {
 			if ($(window).scrollTop() >= pxShow) {
 				goTopButton.fadeIn(fadeInTime);
+				goDownButton.fadeIn(fadeInTime);
 			} else {
 				goTopButton.fadeOut(fadeOutTime);
+				goDownButton.fadeOut(fadeOutTime);
 			}
 		});
 	};	
