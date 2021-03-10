@@ -282,7 +282,7 @@
 				$.ajax({   	
 			      type: "POST",
 			      url: "https://formspree.io/f/xvovekqo",
-			      data: $(form).serialize(),
+			      data: JSON.stringify($(form)),
 				  dataType: "json",
 				  crossDomain: true,
 				  headers:{"Access-Control-Allow-Origin":"*"},
