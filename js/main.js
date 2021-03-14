@@ -225,7 +225,7 @@
 			              	setTimeout( function () {
 									el.addClass(animationEfx + ' animated');
 									el.removeClass('item-animate');
-								}, ctr * 50);
+								}, 50);
 
 							});								
 						}, 100);

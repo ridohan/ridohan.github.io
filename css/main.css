@@ -2667,7 +2667,15 @@
 	 margin: .6rem 0 0;
 	 color: rgba(255, 255, 255, 0.6);
  }
- 
+ .lg-sub-html p.text-left {
+	text-align: left;
+ }
+
+ .lg-sub-html p.technos {
+	color:#FFF;
+	font-weight: bold;
+ }
+
  .lg-outer .lg-thumb-item.active,
  .lg-outer .lg-thumb-item:hover {
 	 border-color: #7c3b08;

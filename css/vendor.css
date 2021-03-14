@@ -3729,7 +3729,7 @@
 	position: absolute;
 	top: 0;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.45);
+	background-color: rgba(0, 0, 0, 0.85);
 }
 
 .lg-toolbar .lg-icon {
@@ -3762,7 +3762,7 @@
 }
 
 .lg-sub-html {
-	background-color: rgba(0, 0, 0, 0.45);
+	background-color: rgba(0, 0, 0, 0.75);
 	bottom: 0;
 	color: #EEE;
 	font-size: 16px;
@@ -3779,6 +3779,11 @@
 	font-size: 13px;
 	font-weight: bold;
 }
+
+.lg-sub-html h4 a{
+	 color: #FFF;
+}
+
 
 .lg-sub-html p {
 	font-size: 12px;
