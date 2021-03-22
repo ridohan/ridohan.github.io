@@ -2994,6 +2994,7 @@
 	 font-size: 1.6rem;
 	 text-align: center;
 	 position: relative;
+	 min-height: 500px;
  }
  
  .contact-info p {
