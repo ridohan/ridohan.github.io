@@ -2248,6 +2248,10 @@
  
  #skills .skill-bars li strong {
 	 color: #FFFFFF;
+	 overflow: hidden;
+     white-space: nowrap;
+	 text-overflow: ellipsis;
+	 width: 50%;
  }
  
  #skills .skill-bars li .progress {
