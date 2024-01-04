@@ -774,7 +774,8 @@
 	 padding: 0 3rem;
 	 margin: 0 .3rem 1.2rem 0;
 	 background: #808080;
-	 color: #222222;
+	 color: #000000;
+	 color: rgba(255, 255, 255, 0.5);
 	 text-decoration: none;
 	 cursor: pointer;
 	 text-align: center;
@@ -799,7 +800,7 @@
  input[type="reset"]:focus,
  input[type="button"]:focus {
 	 background: #737373;
-	 color: #000000;
+	 color: #ffffff;
 	 outline: 0;
  }
  
@@ -1952,7 +1953,6 @@
 	 height: 100%;
 	 background: #EBEBEB;
 	 width: 50%;
-	 background-image: url(../images/profile-bg.jpg);
 	 background-repeat: no-repeat;
 	 background-position: center;
 	 -webkit-background-size: cover;
@@ -2811,7 +2811,7 @@
  }
  
  #contact .section-intro h3 {
-	 color: #7c3b08;
+	 color: #a84d07;
  }
  
  #contact .section-intro p.lead {
