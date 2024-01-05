@@ -3195,3 +3195,25 @@
 	 }
  
  }
+
+
+.wrapper-portfolio {
+	display: grid;
+	grid-template-columns: 200px 200px 200px 200px 200px;
+	grid-gap: 10px;
+	color: #444;
+}
+
+.wrapper-portfolio .box {
+	background-color: #ffffff;
+	color: #fff;
+	border-radius: 5px;
+	padding: 20px;
+	font-size: 150%;
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper-portfolio .box img{
+	max-height:75px;
+}
