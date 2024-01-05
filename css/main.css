@@ -3184,22 +3184,13 @@
 	 color: #FFFFFF;
  }
  
- /* ------------------------------------------------------------------- 
-  * responsive:
-  * footer
-  * ------------------------------------------------------------------- */
- @media only screen and (max-width:768px) {
-	 #go-top {
-		 bottom: 0;
-		 right: 0;
-	 }
- 
- }
+
 
 
 .wrapper-portfolio {
 	display: grid;
 	grid-template-columns: 200px 200px 200px 200px 200px;
+
 	grid-gap: 10px;
 	color: #444;
 }
@@ -3216,4 +3207,35 @@
 
 .wrapper-portfolio .box img{
 	max-height:75px;
+}
+
+/* -------------------------------------------------------------------
+  * responsive:
+  * footer
+  * ------------------------------------------------------------------- */
+@media only screen and (max-width:768px) {
+	#go-top {
+		bottom: 0;
+		right: 0;
+	}
+
+
+
+}
+
+
+@media only screen and (max-width:1024px) {
+	.wrapper-portfolio {
+		grid-template-columns: 200px 200px 200px 200px;
+	}
+}
+@media only screen and (max-width:820px) {
+	.wrapper-portfolio {
+		grid-template-columns: 200px 200px 200px;
+	}
+}
+@media only screen and (max-width:430px) {
+	.wrapper-portfolio {
+		grid-template-columns: 165px 165px;
+	}
 }
