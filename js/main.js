@@ -317,18 +317,46 @@
 		fadeInTime  = 400,         // how slow/fast you want the button to show
 		fadeOutTime = 400,         // how slow/fast you want the button to hide
 		scrollSpeed = 300,         // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
-		goTopButton = $("#go-top")
-		// goDownButton = $("#go-down")
+		goTopButton = $("#go-top"),
+		goDownButton = $("#go-down"),
+		aboutSection = $("#about"),
+		skillsSection = $("#skills"),
+		portFolioSection = $("#portfolio"),
+		contactSection = $("#contact");
+
+		var sections = [aboutSection,skillsSection,contactSection];
 
 		// Show or hide the sticky footer button
 		$(window).on('scroll', function() {
 			if ($(window).scrollTop() >= pxShow) {
 				goTopButton.fadeIn(fadeInTime);
-				// goDownButton.fadeIn(fadeInTime);
+				goDownButton.fadeIn(fadeInTime);
 			} else {
 				goTopButton.fadeOut(fadeOutTime);
-				// goDownButton.fadeOut(fadeOutTime);
+				goDownButton.fadeOut(fadeOutTime);
 			}
+
+			console.log($(window).scrollTop() +" > "+aboutSection.position().top);
+			console.log(aboutSection.position().top <= $(window).scrollTop() >= portFolioSection.position().top);
+			if ($(window).scrollTop() >= aboutSection.position().top ) {
+				goDownButton.find("a.smoothscroll").attr('href', '#skills');
+			}else{
+				goDownButton.find("a.smoothscroll").attr('href', '#about');
+			}
+
+			if ( $(window).scrollTop() >= skillsSection.position().top ) {
+				goDownButton.find("a.smoothscroll").attr('href', '#portfolio');
+			}
+
+			if ( $(window).scrollTop() >= portFolioSection.position().top ) {
+				goDownButton.find("a.smoothscroll").attr('href', '#contact');
+			}
+
+			if($(window).scrollTop() + $(window).height() == $(document).height()) {
+				goDownButton.fadeOut(fadeOutTime);
+			}
+
+
 		});
 	};	
 
