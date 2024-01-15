@@ -324,7 +324,7 @@
 		portFolioSection = $("#portfolio"),
 		contactSection = $("#contact");
 
-		var sections = [aboutSection,skillsSection,contactSection];
+		var sections = [aboutSection,skillsSection,portFolioSection,contactSection];
 
 		// Show or hide the sticky footer button
 		$(window).on('scroll', function() {
@@ -336,24 +336,31 @@
 				goDownButton.fadeOut(fadeOutTime);
 			}
 
-			console.log($(window).scrollTop() +" > "+aboutSection.position().top);
-			console.log(aboutSection.position().top <= $(window).scrollTop() >= portFolioSection.position().top);
+
+
 			if ($(window).scrollTop() >= aboutSection.position().top ) {
 				goDownButton.find("a.smoothscroll").attr('href', '#skills');
+				goTopButton.find("a.smoothscroll").attr('href', '#top');
+
 			}else{
 				goDownButton.find("a.smoothscroll").attr('href', '#about');
 			}
 
 			if ( $(window).scrollTop() >= skillsSection.position().top ) {
 				goDownButton.find("a.smoothscroll").attr('href', '#portfolio');
+				goTopButton.find("a.smoothscroll").attr('href', '#about');
 			}
 
 			if ( $(window).scrollTop() >= portFolioSection.position().top ) {
 				goDownButton.find("a.smoothscroll").attr('href', '#contact');
+				goTopButton.find("a.smoothscroll").attr('href', '#skills');
+
 			}
 
 			if($(window).scrollTop() + $(window).height() == $(document).height()) {
 				goDownButton.fadeOut(fadeOutTime);
+				goTopButton.find("a.smoothscroll").attr('href', '#portfolio');
+
 			}
 
 
