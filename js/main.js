@@ -298,8 +298,8 @@
 		               $('#message-success').fadeIn();   
 			      },
 			      error: function() {
-			      	sLoader.fadeOut(); 
-			      	$('#message-warning').html("Something went wrong. Please try again.");
+			      	sLoader.fadeOut();
+			      	$('#message-warning').html(window.rkI18n ? window.rkI18n.t('contact.error') : "Something went wrong. Please try again.");
 			         $('#message-warning').fadeIn();
 			      }
 		      });    		

@@ -1626,9 +1626,45 @@
 	 #header-menu-trigger .header-menu-text {
 		 display: none;
 	 }
- 
+
  }
- 
+
+ /* -------------------------------------------------------------------
+  * language switcher
+  * ------------------------------------------------------------------- */
+ .lang-switcher {
+	 display: block;
+	 position: fixed;
+	 right: 160px;
+	 top: 30px;
+	 height: 42px;
+	 line-height: 42px;
+	 z-index: 800;
+	 font-family: "montserrat-regular", sans-serif;
+	 font-size: 1.1rem;
+	 font-weight: 700;
+	 text-transform: uppercase;
+	 letter-spacing: .2rem;
+	 color: rgba(255, 255, 255, 0.5);
+	 text-decoration: none;
+	 -moz-transition: color 0.3s ease-in-out;
+	 -o-transition: color 0.3s ease-in-out;
+	 -webkit-transition: color 0.3s ease-in-out;
+	 -ms-transition: color 0.3s ease-in-out;
+	 transition: color 0.3s ease-in-out;
+ }
+
+ .lang-switcher:hover,
+ .lang-switcher:focus {
+	 color: #FFFFFF;
+ }
+
+ @media only screen and (max-width:400px) {
+	 .lang-switcher {
+		 right: 80px;
+	 }
+ }
+
  /* ===================================================================
   *  09. home - (_layout.scss)
   *

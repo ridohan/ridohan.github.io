@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="fr"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="fr"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="fr">
 <!--<![endif]-->
 
 <head>
@@ -11,8 +11,14 @@
    ================================================== -->
 	<meta charset="utf-8">
 	<title>Rédouane Khiter, Expert SAP Commerce Cloud / Hybris, Architecte IT</title>
-	<meta name="description" content="Architecte : 15 ans d'expérience dans l'IT dont 10 ans en tant qu’architecte sur des projets eCommerce, retail et bancaires.">
+	<meta name="description" content="Architecte : 15 ans d'expérience dans l'IT dont 10 ans en tant qu'architecte sur des projets eCommerce, retail et bancaires.">
 	<meta name="author" content="Rédouane Khiter">
+
+	<!-- hreflang SEO
+   ================================================== -->
+	<link rel="alternate" hreflang="fr" href="https://www.redouane-khiter.com/">
+	<link rel="alternate" hreflang="en" href="https://www.redouane-khiter.com/?lang=en">
+	<link rel="alternate" hreflang="x-default" href="https://www.redouane-khiter.com/">
 
 	<!-- mobile specific metas
    ================================================== -->
@@ -28,7 +34,7 @@
    ================================================== -->
 
 	<meta name="title" property="og:title" content="Rédouane Khiter, Expert SAP Commerce Cloud / Hybris, Architecte IT">
-	<meta name="description" property="og:description" content="Architecte : 15 ans d'expérience dans l'IT dont 10 ans en tant qu’architecte sur des projets eCommerce, retail et bancaires.">
+	<meta name="description" property="og:description" content="Architecte : 15 ans d'expérience dans l'IT dont 10 ans en tant qu'architecte sur des projets eCommerce, retail et bancaires.">
 	<meta name="image" property="og:image" content="https://www.redouane-khiter.com/images/intro-bg.jpg">
 	<meta property="og:type" content="website">
 
@@ -65,13 +71,15 @@
 
 <body id="top">
 
-	<!-- header 
+	<!-- header
    ================================================== -->
 	<header>
 
 		<div class="header-logo">
 			<a href="/">RK</a>
 		</div>
+
+		<a id="lang-switcher" href="?lang=en" title="Switch to English" class="lang-switcher">EN</a>
 
 		<a id="header-menu-trigger" href="#0">
 			<span class="header-menu-text">Menu</span>
@@ -82,17 +90,14 @@
 
 			<a href="#0" class="close-button" title="close"><span>Close</span></a>
 
-			<h3>Bonjour !</h3>
+			<h3 data-i18n="nav.hello">Bonjour !</h3>
 
 			<ul class="nav-list">
-				<li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
-				<li><a class="smoothscroll" href="#about" title="">À propos de moi</a></li>
-
-				<li><a class="smoothscroll" href="#skills" title="">Compétences</a></li>
-				<li><a class="smoothscroll" href="#portfolio" title="">Portfolio</a></li>
-				<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
-
-
+				<li class="current"><a class="smoothscroll" href="#home" data-i18n="nav.home">Home</a></li>
+				<li><a class="smoothscroll" href="#about" data-i18n="nav.about">À propos de moi</a></li>
+				<li><a class="smoothscroll" href="#skills" data-i18n="nav.skills">Compétences</a></li>
+				<li><a class="smoothscroll" href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+				<li><a class="smoothscroll" href="#contact" data-i18n="nav.contact">Contact</a></li>
 			</ul>
 
 			<ul class="header-social-list">
@@ -132,22 +137,19 @@
 					<div class="col-twelve">
 						<div class="home-bottom-text">
 
-							<h3 class="animate-intro">Hello, World.</h3>
-							<h1 class="animate-intro">
-								Je suis Rédouane Khiter. <br>
-								Expert SAP Commerce Cloud, <br>
-								Architecte IT /
+							<h3 class="animate-intro" data-i18n="hero.greeting">Hello, World.</h3>
+							<h1 class="animate-intro" data-i18n-html="hero.name">
+								Je suis Rédouane Khiter.<br>
+								Expert SAP Commerce Cloud,<br>
+								Architecte IT /<br>
 								+15 ans d'XP.
 							</h1>
 
 							<ul class="home-section-links">
-								<li class="animate-intro">À propos de <a href="#about" class="smoothscroll">Mon
-										Profil</a></li>
-								<li class="animate-intro">Consulter <a href="#skills" class="smoothscroll">Mes
-										compétences</a></li>
-								<li class="animate-intro">Découvrir <a href="#portfolio" class="smoothscroll">Mon
-										portfolio</a></li>
-								<li class="animate-intro">Me <a href="#contact" class="smoothscroll">Contacter</a></li>
+								<li class="animate-intro"><span data-i18n="hero.link1.prefix">À propos de</span> <a href="#about" class="smoothscroll" data-i18n="hero.link1.anchor">Mon Profil</a></li>
+								<li class="animate-intro"><span data-i18n="hero.link2.prefix">Consulter</span> <a href="#skills" class="smoothscroll" data-i18n="hero.link2.anchor">Mes compétences</a></li>
+								<li class="animate-intro"><span data-i18n="hero.link3.prefix">Découvrir</span> <a href="#portfolio" class="smoothscroll" data-i18n="hero.link3.anchor">Mon portfolio</a></li>
+								<li class="animate-intro"><span data-i18n="hero.link4.prefix">Me</span> <a href="#contact" class="smoothscroll" data-i18n="hero.link4.anchor">Contacter</a></li>
 							</ul>
 
 						</div> <!-- end home-bottom-text -->
@@ -176,29 +178,30 @@
 				<div class="about-profile-bg"></div>
 
 				<div class="intro">
-					<h3 class="animate-this">À propos de</h3>
-					<h1 class="animate-this">Mon Profil.</h1>
+					<h3 class="animate-this" data-i18n="about.subtitle">À propos de</h3>
+					<h1 class="animate-this" data-i18n="about.title">Mon Profil.</h1>
 
-					<p class="lead animate-this">Avec plus de 15 ans d'xp dans l’IT et l’eCommerce, je vous accompagne et
+					<p class="lead animate-this" data-i18n="about.lead">Avec plus de 15 ans d'xp dans l'IT et l'eCommerce, je vous accompagne et
 						vous conseille afin de répondre aux problématiques que vous rencontrez.</p>
 				</div>
 
-				<p class="animate-this">
+				<p class="animate-this" data-i18n="about.p1">
 					Diplomé à la fois de Centrale Lille et Skema Business School, mon parcours atypique m'a permis
 					d'aborder des problématiques à la fois techniques et fonctionnelles.
 				</p>
 
-				<p class="animate-this">Convaincu que sans le métier la technique n'est rien, je mets un point d'honneur
+				<p class="animate-this" data-i18n="about.p2">Convaincu que sans le métier la technique n'est rien, je mets un point d'honneur
 					à faire le lien entre les besoins orientés business et les solutions techniques.</p>
-				<p class="animate-this">Mon parcours me permet d'adresser un champs de problématiques vaste et varié :
+				<p class="animate-this" data-i18n-html="about.p3">Mon parcours me permet d'adresser un champs de problématiques vaste et varié :
 					<br />- eCommerce
 					<br />- Expert SAP Commerce Cloud / Hybris
 					<br />- Architecte IT
 					<br />- Cloud / DevOps
 					<br />- Performances
 					<br />- Formation
+				</p>
 				<p>
-					<a href="#contact" class="button full-width animate-this smoothscroll">Contacter Moi</a>
+					<a href="#contact" class="button full-width animate-this smoothscroll" data-i18n="about.cta">Contacter Moi</a>
 				</p>
 
 			</div> <!-- end about-profile  -->
@@ -206,10 +209,10 @@
 			<div class="about-services">
 
 				<div class="intro">
-					<h3 class="animate-this">À propos de</h3>
-					<h1 class="animate-this">Mes offres.</h1>
+					<h3 class="animate-this" data-i18n="services.subtitle">À propos de</h3>
+					<h1 class="animate-this" data-i18n="services.title">Mes offres.</h1>
 
-					<p class="lead animate-this">Afin de mieux répondre à vos besoins, je vous propose mes compétences à
+					<p class="lead animate-this" data-i18n="services.lead">Afin de mieux répondre à vos besoins, je vous propose mes compétences à
 						travers un ensemble de services et de produits éprouvés : </p>
 				</div>
 
@@ -219,8 +222,8 @@
 							<i class="icon-Shop"></i>
 						</div>
 						<div class="service-item">
-							<h4>eCommerce</h4>
-							<p>Accompagnement dans vos problématiques eCommerce : moteur de promotions, cycle de vie de
+							<h4 data-i18n="services.ecommerce.title">eCommerce</h4>
+							<p data-i18n="services.ecommerce.desc">Accompagnement dans vos problématiques eCommerce : moteur de promotions, cycle de vie de
 								la commande, catalogue produit et bien d'autres sujets !
 							</p>
 						</div>
@@ -230,8 +233,8 @@
 							<i class="icon-Services"></i>
 						</div>
 						<div class="service-item">
-							<h4>SAP Commerce Cloud / Hybris</h4>
-							<p>Audit d'expertise, étude de cas, création d'extensions génériques orientées sur la
+							<h4 data-i18n="services.hybris.title">SAP Commerce Cloud / Hybris</h4>
+							<p data-i18n="services.hybris.desc">Audit d'expertise, étude de cas, création d'extensions génériques orientées sur la
 								performance, formation avancée, développement spécifique
 							</p>
 						</div>
@@ -241,8 +244,8 @@
 							<i class="icon-Upload2"></i>
 						</div>
 						<div class="service-item">
-							<h4>DevOps / Cloud</h4>
-							<p>Évangelisation, mise en place d'une stratégie et architecture Cloud, ateliers et
+							<h4 data-i18n="services.cloud.title">DevOps / Cloud</h4>
+							<p data-i18n="services.cloud.desc">Évangelisation, mise en place d'une stratégie et architecture Cloud, ateliers et
 								réalisations autour de la CI/CD
 							</p>
 						</div>
@@ -252,8 +255,8 @@
 							<i class="icon-Checked"></i>
 						</div>
 						<div class="service-item">
-							<h4>Architecture IT</h4>
-							<p>Accompagnement et analyse de votre écosystème pour en définir une architecture cohérente
+							<h4 data-i18n="services.architecture.title">Architecture IT</h4>
+							<p data-i18n="services.architecture.desc">Accompagnement et analyse de votre écosystème pour en définir une architecture cohérente
 								et fiable.
 							</p>
 
@@ -264,8 +267,8 @@
 							<i class="icon-Bullish"></i>
 						</div>
 						<div class="service-item">
-							<h4>Performances</h4>
-							<p>Audit, monitoring et campagne de tests de charges, d’endurance et de limite
+							<h4 data-i18n="services.perf.title">Performances</h4>
+							<p data-i18n="services.perf.desc">Audit, monitoring et campagne de tests de charges, d'endurance et de limite
 							</p>
 						</div>
 					</li>
@@ -274,8 +277,8 @@
 							<i class="icon-GraduationCap"></i>
 						</div>
 						<div class="service-item">
-							<h4>Formation</h4>
-							<p>Programmes de formations spécialisés sur de multiples sujets : Performances, eCommerce,
+							<h4 data-i18n="services.training.title">Formation</h4>
+							<p data-i18n="services.training.desc">Programmes de formations spécialisés sur de multiples sujets : Performances, eCommerce,
 								SAP Commerce Cloud / Hybris, Java, Cloud, DevOps
 							</p>
 						</div>
@@ -289,7 +292,7 @@
 	</section> <!-- end about -->
 
 
-	<!-- about
+	<!-- skills
    ================================================== -->
 	<section id="skills">
 
@@ -298,12 +301,12 @@
 
 		<div class="row section-intro with-bottom-sep">
 			<div class="col-twelve">
-				<h3 class="animate-this fadeInUp animated">Skillset</h3>
-				<h1 class="animate-this fadeInUp animated">Mes compétences.</h1>
+				<h3 class="animate-this fadeInUp animated" data-i18n="skills.subtitle">Skillset</h3>
+				<h1 class="animate-this fadeInUp animated" data-i18n="skills.title">Mes compétences.</h1>
 
-				<p class="lead">Afin de répondre le plus possible aux problèmatiques gravitant autour de l'architecture,
+				<p class="lead" data-i18n="skills.lead1">Afin de répondre le plus possible aux problèmatiques gravitant autour de l'architecture,
 					un ensemble de compétences vaste et varié est nécessaire.</p>
-				<p class="lead">Des soft skills pour comprendre le métier et évangéliser aux hard skills sur Apache
+				<p class="lead" data-i18n="skills.lead2">Des soft skills pour comprendre le métier et évangéliser aux hard skills sur Apache
 					Kafka, Microsoft Azure ou bien encore Gatling, mes armes sont nombreuses pour affronter les
 					challenges de demain.</p>
 			</div>
@@ -311,12 +314,10 @@
 
 		<div class="row wide">
 
-
-
 			<div class="col-skills">
 
 				<div>
-					<h4 class="animate-this">Architecture</h4>
+					<h4 class="animate-this" data-i18n="skills.cat.architecture">Architecture</h4>
 					<ul class="skill-bars">
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent95"><span>95%</span></div>
@@ -337,10 +338,8 @@
 					</ul>
 				</div>
 
-
-
 				<div>
-					<h4 class="animate-this">Cloud</h4>
+					<h4 class="animate-this" data-i18n="skills.cat.cloud">Cloud</h4>
 					<ul class="skill-bars">
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent80"><span>80%</span></div>
@@ -367,7 +366,7 @@
 				</div>
 
 				<div>
-					<h4 class="animate-this">Méthodologies / Soft Skills</h4>
+					<h4 class="animate-this" data-i18n="skills.cat.softskills">Méthodologies / Soft Skills</h4>
 					<ul class="skill-bars">
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent100"></div>
@@ -383,58 +382,44 @@
 						</li>
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent100"></div>
-							<strong>Esprit d'entreprendre</strong>
+							<strong data-i18n="skills.softskill.entreprendre">Esprit d'entreprendre</strong>
 						</li>
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent100"></div>
-							<strong>Résolution des problèmes, adaptation</strong>
+							<strong data-i18n="skills.softskill.resolution">Résolution des problèmes, adaptation</strong>
 						</li>
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent100"></div>
-							<strong>Ecoute & empathie</strong>
+							<strong data-i18n="skills.softskill.ecoute">Ecoute & empathie</strong>
 						</li>
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent100"></div>
-							<strong>Communicant</strong>
+							<strong data-i18n="skills.softskill.communicant">Communicant</strong>
 						</li>
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent100"> </div>
-							<strong>Flexible</strong>
+							<strong data-i18n="skills.softskill.autonome">Autonome</strong>
 						</li>
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent100"></div>
-							<strong>Autonome</strong>
+							<strong data-i18n="skills.softskill.recul">Prise de recul, d'initiative</strong>
 						</li>
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent100"></div>
-							<strong>Prise de recul, d'initiative</strong>
+							<strong data-i18n="skills.softskill.motivation">Motivation</strong>
 						</li>
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent100"></div>
-							<strong>Motivation</strong>
+							<strong data-i18n="skills.softskill.curiosite">Curiosité</strong>
 						</li>
-						<li class="animate-this" data-animate="fadeInRight">
-							<div class="progress percent100"></div>
-							<strong>Curiosité</strong>
-						</li>
-
 
 					</ul>
 				</div>
 
-
-
-
-
-
-
-
-
-
-			</div> <!-- end col-six -->
+			</div> <!-- end col-skills -->
 			<div class="col-skills">
 				<div>
-					<h4 class="animate-this">Solutions</h4>
+					<h4 class="animate-this" data-i18n="skills.cat.solutions">Solutions</h4>
 					<ul class="skill-bars">
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent95"><span>95%</span></div>
@@ -455,7 +440,7 @@
 					</ul>
 				</div>
 				<div>
-					<h4 class="animate-this">DevOps</h4>
+					<h4 class="animate-this" data-i18n="skills.cat.devops">DevOps</h4>
 					<ul class="skill-bars">
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent90"><span>90%</span></div>
@@ -492,7 +477,7 @@
 					</ul>
 				</div>
 				<div>
-					<h4 class="animate-this">Langages</h4>
+					<h4 class="animate-this" data-i18n="skills.cat.languages">Langages</h4>
 					<ul class="skill-bars">
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent95"><span>95%</span></div>
@@ -513,7 +498,7 @@
 					</ul>
 				</div>
 				<div>
-					<h4 class="animate-this">Qualité de Code & Performances</h4>
+					<h4 class="animate-this" data-i18n="skills.cat.quality">Qualité de Code & Performances</h4>
 					<ul class="skill-bars">
 						<li class="animate-this" data-animate="fadeInRight">
 							<div class="progress percent95"><span>95%</span></div>
@@ -540,19 +525,16 @@
 	</section> <!-- end skills -->
 
 
-
-
-
 	<!-- portfolio
    ================================================== -->
 	<section id="portfolio">
 
 		<div class="row narrow section-intro with-bottom-sep">
 			<div class="col-twelve">
-				<h3 class="animate-this">Portfolio</h3>
-				<h1 class="animate-this">Les belles expériences.</h1>
+				<h3 class="animate-this" data-i18n="portfolio.subtitle">Portfolio</h3>
+				<h1 class="animate-this" data-i18n="portfolio.title">Les belles expériences.</h1>
 
-				<p class="lead animate-this">Mon parcours m'a permis de rencontrer des personnes inspirantes et de travailler sur des sujets de fonds captivants, en voici quelques références.</p>
+				<p class="lead animate-this" data-i18n="portfolio.lead">Mon parcours m'a permis de rencontrer des personnes inspirantes et de travailler sur des sujets de fonds captivants, en voici quelques références.</p>
 			</div>
 		</div> <!-- end row section-intro -->
 
@@ -597,61 +579,6 @@
 	</section> <!-- end portfolio -->
 
 
-	<!-- stats
-   ================================================== -->
-	<!--<section id="stats">
-
-		<div class="row">
-			<div class="col-twelve">
-				<div class="block-1-4 block-tab-1-2 block-mob-full stats-list">
-
-					<div class="bgrid stat">
-						<div class="icon-part">
-							<i class="icon-Briefcase"></i>
-						</div>
-						<h5 class="stat-title">
-							Projets réussis
-						</h5>
-						<h3 class="stat-count">33</h3>
-					</div> &lt;!&ndash; end stat &ndash;&gt;
-
-					<div class="bgrid stat">
-						<div class="icon-part">
-							<i class="icon-AddressBook"></i>
-						</div>
-						<h5 class="stat-title">
-							Clients ravis
-						</h5>
-						<h3 class="stat-count">20</h3>
-					</div> &lt;!&ndash; end stat &ndash;&gt;
-
-					<div class="bgrid stat">
-						<div class="icon-part">
-							<i class="icon-GraduationCap"></i>
-						</div>
-						<h5 class="stat-title">
-							Profils formés
-						</h5>
-						<h3 class="stat-count">36</h3>
-					</div> &lt;!&ndash; end stat &ndash;&gt;
-
-					<div class="bgrid stat">
-						<div class="icon-part">
-							<i class="icon-Idea"></i>
-						</div>
-						<h5 class="stat-title">
-							Idées brillantes
-						</h5>
-						<h3 class="stat-count">9000</h3>
-					</div> &lt;!&ndash; end stat &ndash;&gt;
-
-				</div> &lt;!&ndash; end stats-list &ndash;&gt;
-			</div> &lt;!&ndash; end col-twelve &ndash;&gt;
-		</div> &lt;!&ndash; end row &ndash;&gt;
-
-	</section> &lt;!&ndash; end stats &ndash;&gt;-->
-
-
 	<!-- contact
    ================================================== -->
 	<section id="contact">
@@ -660,18 +587,16 @@
 
 		<div class="row narrow section-intro">
 			<div class="col-twelve">
-				<h3 class="animate-this">Contact</h3>
-				<h1 class="animate-this">N'hésitez pas à me contacter afin de discuter de vos enjeux.</h1>
+				<h3 class="animate-this" data-i18n="contact.subtitle">Contact</h3>
+				<h1 class="animate-this" data-i18n="contact.title">N'hésitez pas à me contacter afin de discuter de vos enjeux.</h1>
 
-				<p class="lead animate-this">Je suis disponible pour un audit, une formation ou une prestation longue,
+				<p class="lead animate-this" data-i18n="contact.lead">Je suis disponible pour un audit, une formation ou une prestation longue,
 					étudions votre demande</p>
 			</div>
 		</div> <!-- end section-intro -->
 
 		<div class="row contact-form">
 			<div class="col-twelve">
-
-
 
 				<!-- contact-warning -->
 				<div id="message-warning">
@@ -680,7 +605,7 @@
 
 				<!-- contact-success -->
 				<div id="message-success">
-					<i class="fa fa-check"></i>Votre message a bien été envoyé, merci !<br>
+					<i class="fa fa-check"></i><span data-i18n="contact.success">Votre message a bien été envoyé, merci !</span><br>
 				</div>
 
 			</div> <!-- end col-twelve -->
@@ -689,16 +614,16 @@
 		<div class="row contact-info">
 
 			<div class="col-four tab-full">
-				<h5 class="animate-this">Par LinkedIn</h5>
+				<h5 class="animate-this" data-i18n="contact.linkedin.label">Par LinkedIn</h5>
 
 				<p class="animate-this">
-					<a href="https://www.linkedin.com/in/redouane-khiter-30754364/" target="_blank">Mon profil
+					<a href="https://www.linkedin.com/in/redouane-khiter-30754364/" target="_blank" data-i18n="contact.linkedin.link">Mon profil
 						LinkedIn</a>
 				</p>
 			</div> <!-- end col-four -->
 
 			<div class="col-four tab-full collapse">
-				<h5 class="animate-this">Par Email</h5>
+				<h5 class="animate-this" data-i18n="contact.email.label">Par Email</h5>
 
 				<p class="animate-this">
 					<a href="mailto:red.khiter.pro@gmail.com" target="_blank">red.khiter.pro@gmail.com</a>
@@ -706,7 +631,7 @@
 			</div> <!-- end col-four -->
 
 			<div class="col-four tab-full">
-				<h5 class="animate-this">Par téléphone</h5>
+				<h5 class="animate-this" data-i18n="contact.phone.label">Par téléphone</h5>
 
 				<p class="animate-this">
 					<a href="tel:+33668107188"> (+33) 06 68 10 71 88 </a>
@@ -733,14 +658,6 @@
 				</ul>
 			</div>
 
-
-
-
-
-
-
-
-
 			<div class="col-twelve tab-full">
 				<div class="copyright">
 					<span>© Copyright Redouane Khiter 2024.</span>
@@ -765,6 +682,8 @@
    ================================================== -->
 	<script src="js/jquery-2.1.3.min.js"></script>
 	<script src="js/plugins.js"></script>
+	<script src="js/translations.js"></script>
+	<script src="js/i18n.js"></script>
 	<script src="js/main.js"></script>
 
 </body>
