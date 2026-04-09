@@ -330,40 +330,9 @@
 		$(window).on('scroll', function() {
 			if ($(window).scrollTop() >= pxShow) {
 				goTopButton.fadeIn(fadeInTime);
-				goDownButton.fadeIn(fadeInTime);
 			} else {
 				goTopButton.fadeOut(fadeOutTime);
-				goDownButton.fadeOut(fadeOutTime);
 			}
-
-
-
-			if ($(window).scrollTop() >= aboutSection.position().top ) {
-				goDownButton.find("a.smoothscroll").attr('href', '#skills');
-				goTopButton.find("a.smoothscroll").attr('href', '#top');
-
-			}else{
-				goDownButton.find("a.smoothscroll").attr('href', '#about');
-			}
-
-			if ( $(window).scrollTop() >= skillsSection.position().top ) {
-				goDownButton.find("a.smoothscroll").attr('href', '#portfolio');
-				goTopButton.find("a.smoothscroll").attr('href', '#about');
-			}
-
-			if ( $(window).scrollTop() >= portFolioSection.position().top ) {
-				goDownButton.find("a.smoothscroll").attr('href', '#contact');
-				goTopButton.find("a.smoothscroll").attr('href', '#skills');
-
-			}
-
-			if($(window).scrollTop() + $(window).height() == $(document).height()) {
-				goDownButton.fadeOut(fadeOutTime);
-				goTopButton.find("a.smoothscroll").attr('href', '#portfolio');
-
-			}
-
-
 		});
 	};	
 
