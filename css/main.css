@@ -2757,13 +2757,24 @@
 	 border: none;
  }
 
- .testimonial-item blockquote p {
+ .testimonial-text {
 	 font-family: "librebaskerville-regular", serif;
 	 font-size: 1.7rem;
 	 line-height: 1.9;
 	 color: #555555;
 	 margin: 0 0 2.4rem 0;
 	 padding-left: 2rem;
+	 text-indent: 1.5rem;
+ }
+
+ .testimonial-text ul {
+	 margin: 1.2rem 0 1.6rem 2rem;
+	 padding: 0;
+ }
+
+ .testimonial-text ul li {
+	 margin-bottom: .6rem;
+	 padding-left: .4rem;
  }
 
  .testimonial-item blockquote footer {
