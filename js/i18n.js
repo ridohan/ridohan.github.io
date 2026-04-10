@@ -15,8 +15,18 @@
       var stored = localStorage.getItem(STORAGE_KEY);
       if (stored === 'en' || stored === 'fr') return stored;
     } catch (e) {}
-    var browser = (navigator.language || 'fr').substring(0, 2).toLowerCase();
-    return browser === 'en' ? 'en' : 'fr';
+    var browserLangs = [];
+    if (navigator.languages && navigator.languages.length) {
+      browserLangs = navigator.languages;
+    } else if (navigator.language) {
+      browserLangs = [navigator.language];
+    }
+
+    var hasFrench = browserLangs.some(function (lang) {
+      return String(lang).toLowerCase().indexOf('fr') === 0;
+    });
+
+    return hasFrench ? 'fr' : 'en';
   }
 
   function applyTranslations(lang) {
